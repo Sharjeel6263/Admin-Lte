@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="container">
+<div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="col-md-11">
             <div class="card">
                 <div class="card-header">{{ __('Bookings') }}</div>
                 <div class="card-body">
@@ -42,7 +42,7 @@
                                         @method('DELETE')
                                         <a href="{{ route('bookings.show', $booking->id) }}" class="btn btn-info btn-sm">Show</a>
                                         <a href="{{ route('bookings.edit', $booking->id) }}" class="btn btn-primary btn-sm">Edit</a>
-                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                        <button type="submit" class="btn btn-danger btn-sm mt-1">Delete</button>
                                     </form>
                                 </td>
                             </tr>

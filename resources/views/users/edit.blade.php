@@ -26,6 +26,13 @@
                             @enderror
                         </div>
                         <div class="form-group">
+                            <label for="">Phone Number</label>
+                            <input type="phone_number" name="phone_number" class="form-control" value="{{ $user->phone_number }}">
+                            @error('phone_number')
+                            <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
                             <label for="">Password</label>
                             <input type="password" name="password" class="form-control">
                             @error('password')
@@ -34,7 +41,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Role</label>
-                            <select class="form-select" name="roles[]"multiple>
+                            <select class="form-select form-control" name="roles[]"multiple >
                                 <option >--Select Role--</option>
                                 @foreach ($roles as $role)
                                 <option value="{{$role->name}}" {{ $user->hasRole($role->name) ? "selected" : ""}}>{{$role->name}}</option>

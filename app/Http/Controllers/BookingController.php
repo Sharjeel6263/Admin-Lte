@@ -5,7 +5,6 @@ use App\Models\User;
 use App\Models\Booking;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 
 class BookingController extends Controller
 {
@@ -33,7 +32,6 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
 
         $request->validate([
             'name' => 'required',

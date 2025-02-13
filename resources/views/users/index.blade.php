@@ -52,13 +52,11 @@
                                         <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                                         @endcan
                                         @can('user-list')
-                                        <a href="{{ route('users.sendMail', $user->id) }}" class="btn btn-warning btn-sm">Send Email</a>
+                                        <a href="{{ route('users.sendMail', $user->id) }}" class="btn btn-warning btn-sm mt-1">Send Email</a>
                                         @endcan
                                     </form>
                                 </td>
-
                             </tr>
-
                             @endforeach
                         </tbody>
                     </table>

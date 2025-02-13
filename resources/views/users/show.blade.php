@@ -10,6 +10,11 @@
                     <a href="{{route('users.index')}}" class="btn btn-success mb-2">Back</a>
                     <p><strong>Name:</strong> {{$user->name}} </p>
                     <p><strong>Email:</strong> {{$user->email}} </p>
+                    <p><strong>Role:</strong>
+                        @foreach ($user->getRoleNames() as $role)
+                            <button class="btn btn-success btn-sm">{{ $role }}</button>
+                        @endforeach
+                    </p>
                 </div>
             </div>
         </div>
